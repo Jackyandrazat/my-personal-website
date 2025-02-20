@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply bg-secondary dark:bg-neutral;
+  @apply bg-neutral dark:bg-neutral;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
