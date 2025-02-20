@@ -4,6 +4,7 @@ import NavbarComponent from "../components/NavbarComponent";
 import CardList  from "../components/CardListComponent";
 import SkillsGrid  from "../components/SkillGridComponent";
 import ContactMe  from "../components/ContactComponent";
+import PdfViewer  from "../components/PdfViewer";
 
 export function Welcome() {
   return (
@@ -33,7 +34,7 @@ export function Welcome() {
           <div className="mt-6 flex items-center space-x-4">
             {/* Resume Button */}
             <a
-              href="/resume.pdf"
+              href="/pdf"
               className="px-6 py-2 border-2 border-primary font-semibold rounded-md hover:bg-primary hover:text-white transition"
             >
               Resume
