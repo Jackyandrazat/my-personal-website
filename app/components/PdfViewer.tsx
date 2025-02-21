@@ -4,7 +4,9 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 // Atur worker agar bisa ditemukan
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
+pdfjs.GlobalWorkerOptions.workerSrc = import.meta.env.VITE_PDF_WORKER_SRC || "/pdf.worker.mjs";
+
+
 
 const PdfViewer: React.FC = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
