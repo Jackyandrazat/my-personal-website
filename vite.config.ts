@@ -17,7 +17,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           pdfjsWorker: ["pdfjs-dist/build/pdf.worker"],
-          "pdf.worker": ["pdfjs-dist/build/pdf.worker"],
         },
       },
     },
