@@ -10,3 +10,6 @@ command = "react-router dev"
   for = "/*.mjs"
   [headers.values]
     Content-Type = "application/javascript"
+
+[context.production.environment]
+  VITE_PDF_WORKER_SRC = "https://personalwebjacky.netlify.app/pdf.worker.mjs"
