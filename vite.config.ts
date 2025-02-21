@@ -20,6 +20,9 @@ export default defineConfig({
         },
       },
     },
+    commonjsOptions: {
+      transformMixedEsModules: true, // Agar PDF.js dapat dijalankan
+    },
     copyPublicDir: true, // Pastikan folder `public/` disalin ke hasil build
   },
 });

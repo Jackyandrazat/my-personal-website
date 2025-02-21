@@ -1,6 +1,7 @@
 [build]
 command = "react-router build"
 publish = "build/client"
+NODE_VERSION = "22"
 
 [dev]
 command = "react-router dev"
