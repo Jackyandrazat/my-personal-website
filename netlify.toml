@@ -5,3 +5,8 @@ NODE_VERSION = "22"
 
 [dev]
 command = "react-router dev"
+
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript"
