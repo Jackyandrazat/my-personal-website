@@ -13,7 +13,7 @@ const PdfViewer: React.FC = () => {
   // **1️⃣ Pastikan worker hanya digunakan di client-side**
   useEffect(() => {
     if (typeof window !== "undefined") {
-      pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Worker hanya untuk parsing
+      pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.js"; // Worker hanya untuk parsing
       setIsClient(true);
     }
   }, []);
