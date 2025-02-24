@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Document, Page } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const PdfViewer: React.FC = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
@@ -11,7 +13,7 @@ const PdfViewer: React.FC = () => {
 
   // 🔹 **Setel path PDF (pastikan file tersedia di public/)**
   useEffect(() => {
-    setFileUrl("resume.pdf"); // Pastikan file ada di folder `public/`
+    setFileUrl("/resume.pdf"); // Pastikan file ada di folder `public/`
   }, []);
 
   return (
