@@ -7,6 +7,12 @@ import path from "path";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths(), netlifyPlugin()],
+  optimizeDeps: {
+    include: ['pdfjs-dist'],
+    esbuildOptions: {
+      target: 'esnext',
+    },
+  },
   resolve: {
     alias: {
       "pdfjs-dist": path.resolve(__dirname, "node_modules/pdfjs-dist"),
